@@ -5,7 +5,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |mail|string|null: false|
-|name|string|index: true,null: false,unique: true|
+|name|string|index: true,null: false, unique: true|
 ### Association
 - has_many :groups_users
 - has_many :groups, through: :groups_users
@@ -23,7 +23,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true,null: false,unique: true|
+|name|string|index: true, null: false, unique: true|
 ### Association
 - has_many :groups_users
 - has_many :users, through: :groups_users
@@ -35,7 +35,7 @@
 |image|string||
 |body|text||
 |user|references|null: false, foreign_key: true|
-|group|references|foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
