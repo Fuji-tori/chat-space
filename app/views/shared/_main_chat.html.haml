@@ -1,0 +1,32 @@
+!!!
+%html{lang: "ja"}
+  %head
+    %meta{charset: "utf-8"}
+  %body
+    .chat-main
+      .chat-main__group-info
+        .group__left-info
+          %h2.group__name-info< test
+          %ul.group__member-list< Member :masa
+        .group__edit-btn
+          = link_to "#" do
+            Edit
+      .chat-main__message-list
+        .message
+          .message__up-info
+            %p.message__up-name< masa
+            %p.message__up-day< 2019/11/20(Wed) 17:43:01
+          .message__text< おはよう！
+        .message
+          .message__up-info
+            %p.message__up-name< masa
+            %p.message__up-day< 2019/11/20(Wed) 17:43:34
+          .message__text< 今日は夜から雨
+      .chat-main__message-form
+        %fome.new_message
+          .input-box
+            %input{ type:"text", class:"input-box__text", placeholder:"type a message" }
+            %label{ class:"input-box__image"}
+              = icon( 'fas','image')
+              %input{ type:"file", class:"input-box__image__file" }
+          %input{ type:"submit", class:"submit-btn" }
