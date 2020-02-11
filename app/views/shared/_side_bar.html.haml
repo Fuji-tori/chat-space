@@ -1,21 +1,16 @@
-!!!
-%html{lang: "ja"}
-  %head
-    %meta{charset: "utf-8"}
-  %body
-    .side-bar
-      .side-bar__user-name
-        .top-items
-          %p.top-items__name
-            name
-            %ul.top-items__icons
-              %li.icons-left
-                = link_to "#" do
-                  %i.fa.fa-edit
-              %li.icons-right
-                = link_to "#" do
-                  %i.fa.fa-cog
-      .side-bar__group-list
-        %ul.group-list
-          %li.group__group-name< techcamp
-          %li.group__last-message< まだメッセージはありません。
+.side-bar
+  .side-bar__user-name
+    .top-items
+      %p.top-items__name
+        name
+        %ul.top-items__icons
+          %li.icons-left
+            = link_to "#" do
+              %i.fa.fa-edit
+          %li.icons-right
+            = link_to "#" do
+              %i.fa.fa-cog
+  .side-bar__group-list
+    %ul.group-list
+      %li.group__group-name< techcamp
+      %li.group__last-message< まだメッセージはありません。
