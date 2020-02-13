@@ -5,12 +5,44 @@
         name
         %ul.top-items__icons
           %li.icons-left
-            = link_to "#" do
+            = link_to new_group_path do
               %i.fa.fa-edit
           %li.icons-right
-            = link_to "#" do
+            = link_to edit_user_path(current_user.id) do
               %i.fa.fa-cog
   .side-bar__group-list
-    %ul.group-list
-      %li.group__group-name< techcamp
-      %li.group__last-message< まだメッセージはありません。
+    - current_user.groups.each do |group|
+      %ul.guroup-list
+        = link_to '#' do
+          %li.group__group-name
+            = group.name
+          %li.group__last-message
+            メッセージはまだありません。
+
+.chat-main
+  .chat-main__group-info
+    .group__left-info
+      %h2.group__name-info< test
+      %ul.group__member-list< Member :masa
+    .group__edit-btn
+      = link_to "#" do
+        Edit
+  .chat-main__message-list
+    .message
+      .message__up-info
+        %p.message__up-name< masa
+        %p.message__up-day< 2019/11/20(Wed) 17:43:01
+      .message__text< おはよう！
+    .message
+      .message__up-info
+        %p.message__up-name< masa
+        %p.message__up-day< 2019/11/20(Wed) 17:43:34
+      .message__text< 今日は夜から雨
+  .chat-main__message-form
+    %fome.new_message
+      .input-box
+        %input{ type:"text", class:"input-box__text", placeholder:"type a message" }
+        %label{ class:"input-box__image"}
+          = icon( 'fas','image')
+          %input{ type:"file", class:"input-box__image__file" }
+      %input{ type:"submit", class:"submit-btn" }

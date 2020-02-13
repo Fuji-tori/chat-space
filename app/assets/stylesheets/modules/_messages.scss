@@ -1,19 +1,14 @@
-//カラー
-$white: #fff;
-$black-blue: #253141;
-$light-blue: #38aef0;
-
 * {
   box-sizing: border-box;
 }
 
 .side-bar {
-  background-color: $black-blue;
+  background-color: $side_blue_dark;
   height: 860px;
   width: 300px;
   float: left;
   .side-bar__user-name {
-    background-color: $black-blue;
+    background-color: $side_blue_dark;
     height: 100px;
     display: flex;
     align-items: center;
@@ -42,17 +37,21 @@ $light-blue: #38aef0;
     }
   }
   .side-bar__group-list {
-    background-color: #2f3e51;
+    background-color: $side_blue_light;
     height: calc(100vh - 100px);
-    color: $white;
     padding: 20px 20px 0;
     overflow: scroll;
+    a {
+    color: $white;
+    text-decoration: none;
     .group__group-name {
       font-size: 15px;
       margin-bottom: 5px;
     }
     .group__last-message {
       font-size: 11px;
+      margin-bottom: 40px;
+    }
     }
   }
 }
@@ -75,7 +74,7 @@ $light-blue: #38aef0;
         padding: 35px 0 15px 0;
       }
       .group__member-list {
-        color: #999;
+        color: $light_gray;
         font-size: 12px;
         display: flex;
       }
@@ -110,13 +109,13 @@ $light-blue: #38aef0;
           font-weight: bold;
         }
         .message__up-day {
-          color: #999;
+          color: $light_gray;
           font-size: 12px;
           margin-left: 10px;
         }
       }
       &__text {
-        color: #434a54;
+        color: $black;
         font-size: 14px;
         margin-bottom: 10px;
       }
@@ -133,7 +132,7 @@ $light-blue: #38aef0;
         display: flex;
         position: relative;
         &__text {
-          color: #434a54;
+          color: $black;
           height: 50px;
           width: 100%;
           border-style: none;
