@@ -68,10 +68,11 @@
     justify-content: space-between;
     overflow: scroll;
     .group__left-info {
+      float: left;
       .group__name-info {
         color: #333;
         font-size: 20px;
-        padding: 35px 0 15px 0;
+        padding: 35px 0 0 0;
       }
       .group__member-list {
         color: $light_gray;
@@ -114,7 +115,7 @@
           margin-left: 10px;
         }
       }
-      &__text {
+      .message-text {
         color: $black;
         font-size: 14px;
         margin-bottom: 10px;
@@ -124,31 +125,32 @@
   .chat-main__message-form {
     background-color: #d2d2d2;
     height: 92px;
-    padding: 20px 40px;
+    width: 100%;
+    padding: 20px 50px 20px 40px;
     .new_message {
+      width: 100%;
       display: flex;
-      .input-box {
-        width: 100%;
-        display: flex;
-        position: relative;
-        &__text {
+      position: relative;
+        .input-box__text {
           color: $black;
           height: 50px;
           width: 100%;
           border-style: none;
           padding: 0 40px 0 10px;
+          float: left;
         }
-        &__image {
-          cursor: pointer;
+        .input-box__image {
           font-size: 1.3rem;
-          position: absolute;
           top: 14px;
-          right: 10px;
+          right: 120px;
+          position: absolute;
           .input-box__image__file {
-            display: none;
+            cursor: pointer;
+            .hidden {
+             display: none;
+            }
           }
         }
-      }
       .submit-btn {
         color: $white;
         background-color: $light-blue;
@@ -156,6 +158,7 @@
         width: 100px;
         padding: 0 30px;
         margin-left: 15px;
+        float: right;
         cursor: pointer;
       }
     }
