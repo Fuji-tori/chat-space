@@ -4,7 +4,7 @@
 
 .side-bar {
   background-color: $side_blue_dark;
-  height: 860px;
+  height: 100%;
   width: 300px;
   float: left;
   .side-bar__user-name {
@@ -124,7 +124,7 @@
   }
   .chat-main__message-form {
     background-color: #d2d2d2;
-    height: 92px;
+    height: 90px;
     width: 100%;
     padding: 20px 50px 20px 40px;
     .new_message {
