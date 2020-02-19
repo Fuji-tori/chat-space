@@ -62,7 +62,7 @@ var reloadMessages = function() {
     }
   })
   .fail(function() {
-    console.log('error');
+    alert('非同期通信に失敗しました');
   });
 };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
