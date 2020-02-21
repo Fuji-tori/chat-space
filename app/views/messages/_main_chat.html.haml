@@ -1,9 +1,9 @@
 .chat-main
   .chat-main__group-info
     .group__left-info
-      %h2.group__name-info<
+      %h2.group__name-info
         = @group.name
-      %ul.group__member-list< 
+      %ul.group__member-list
         Members :
         - @group.users.each do |user|
           = user.name
